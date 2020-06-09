@@ -1,26 +1,38 @@
 package Rozetyxzavesy;
 
+import java.awt.event.MouseEvent;
+
 public class Rozetyxzavesy {
 	
 	public static void main(String[] args) throws InterruptedException {
+	
+	// Beginning state of results
 		
-		int leftNum = 0;
-		int rightNum = 0;
-		int result = 0;		
+		float leftNum = 75;
+		float rightNum = 60;
+		float result = rightNum / leftNum * 100;	
+		
+		
+		
+	//prints stuff to monitor
 		
 		Graphics c = new Graphics();
-			
-			c.window ();
-			Thread.sleep(500);
+
+			c.window (result);
+			Thread.sleep(1000);
 			c.leftChange(leftNum); 
 			c.rightChange(rightNum);
-			Thread.sleep(500);
-			c.result(result);	
-		
+			c.setVisible();
+			Thread.sleep(1000);
+			c.result(result);
+			c.setVisible();
+			
+			
+	// responds to mouse events, calls graphics functions
+			
 		Mouse m = new Mouse();
 		
-			
-			
+		Run r = new Run();
 		
 	}
 }
