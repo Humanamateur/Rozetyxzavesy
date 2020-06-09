@@ -82,6 +82,14 @@ public class Graphics{
 		resultNameLabel.setForeground(Color.black);
 		resultNameLabel.setFont(resultFont);
 		
+		if(result < 60.0 ) {
+			window.getContentPane().setBackground(Color.red);
+		}
+		
+		else {
+			window.getContentPane().setBackground(Color.green);
+		}
+		
 		resultNamePanel.add(resultNameLabel);
 		con.add(resultNamePanel);	
 		resultNamePanel.setVisible(true);	
